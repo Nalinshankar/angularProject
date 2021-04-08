@@ -1,0 +1,80 @@
+<mat-radio-group aria-label="" required>
+    <mat-radio-button value="new" ng-model="accountType">New Account</mat-radio-button>
+    <mat-radio-button value="existing" ng-model="accountType" ng-value="true">Existing Account</mat-radio-button>
+</mat-radio-group>
+<div ng-switch="accountType">
+    <form ng-switch-when="new" >
+        <mat-form-field class="">
+            <mat-label>Reference Number</mat-label>
+            <input required matInput formControlName="newTransaction" autocomplete="off" placeholder="Reference Number"
+                type="number" value="">
+        </mat-form-field>
+        <mat-form-field class="">
+            <mat-label>Customer Number</mat-label>
+            <input required matInput formControlName="newTransaction" autocomplete="off" placeholder="Customer Number"
+                type="number" value="">
+        </mat-form-field>
+        <mat-form-field class="">
+            <mat-label>Customer Name</mat-label>
+            <input required matInput formControlName="newTransaction" autocomplete="off" placeholder="Customer Name"
+                type="text" value="">
+        </mat-form-field>
+        <mat-form-field class="">
+            <mat-label>Customer Address</mat-label>
+            <input required matInput formControlName="newTransaction" autocomplete="off" placeholder="Customer Address"
+                value="">
+        </mat-form-field>
+        <mat-form-field class="">
+            <mat-label>Customer Phone Number</mat-label>
+            <input required matInput formControlName="newTransaction" autocomplete="off"
+                placeholder="Customer Phone Number" type="tel" value="">
+        </mat-form-field>
+        <mat-form-field class="">
+            <mat-label>Transfer Ammount</mat-label>
+            <input required matInput formControlName="newTransaction" autocomplete="off" placeholder="Transfer Ammount"
+                value="">
+        </mat-form-field>
+        <mat-form-field class="">
+            <mat-label>Transfer Currency</mat-label>
+            <input required matInput formControlName="newTransaction" autocomplete="off" placeholder="Transfer Currency"
+                value="">
+        </mat-form-field>
+        <mat-form-field class="">
+            <mat-label>Beneficiary Bank</mat-label>
+            <input required matInput formControlName="newTransaction" autocomplete="off" placeholder="Beneficiary Bank"
+                value="">
+        </mat-form-field>
+        <mat-form-field class="">
+            <mat-label>Beneficiary Account Number</mat-label>
+            <input required matInput formControlName="newTransaction" autocomplete="off"
+                placeholder="Beneficiary Account Number" value="">
+        </mat-form-field>
+        <mat-form-field class="">
+            <mat-label>Payment Details</mat-label>
+            <input required matInput formControlName="newTransaction" autocomplete="off" placeholder="Ex. Pizza"
+                value="">
+        </mat-form-field>
+        <mat-form-field class="">
+            <mat-label>Credit/Debit Card Details</mat-label>
+            <input required matInput formControlName="newTransaction" autocomplete="off" placeholder="Payment Details"
+                value="">
+        </mat-form-field>
+        <mat-form-field class="">
+            <mat-label>Region</mat-label>
+            <input required matInput formControlName="newTransaction" autocomplete="off" placeholder="Ex. Pizza"
+                value="">
+        </mat-form-field>
+    </form>
+    <form ng-switch-when="existing">
+        <mat-form-field class="">
+            <mat-label>Reference Number</mat-label>
+            <input required matInput formControlName="transaction" placeholder="Reference Number"
+                autocomplete="off"="number" value="">
+        </mat-form-field>
+        <mat-form-field class="">
+            <mat-label>Customer Number</mat-label>
+            <input required matInput formControlName="transaction" placeholder="Customer Number" autocomplete="off"
+                type="number" value="">
+        </mat-form-field>
+    </form>
+</div>
